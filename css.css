@@ -1,0 +1,360 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.3s ease;
+}
+
+html {
+    font-size: 16px;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+    height: 100%;
+    background-color: #433d52;
+}
+
+body {
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+h1 {
+    font-size: 2.5rem;
+    padding-bottom: 5%;
+}
+
+p {
+    font-size: large;
+}
+
+hr {
+    font-size: large;
+}
+
+.header {
+    overflow: hidden;
+    z-index: 2;
+    padding: 5px;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    flex-direction: row;
+
+}
+
+.header a {
+    float: left;
+    color: rgb(255, 255, 255);
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 10%;
+}
+
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.header a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.header-right {
+    float: right;
+    border-radius: 10px;
+    background-color: rgba(55, 55, 55, 0.5);
+    height: 100%;
+}
+
+.semihText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 100%;
+    width: 100%;
+
+}
+
+svg {
+    font-family: 'Russo One', sans-serif;
+    position: absolute;
+    height: 70%;
+
+}
+
+svg text {
+    text-transform: uppercase;
+    animation: stroke 5s infinite alternate;
+    stroke-width: 2;
+    stroke: #365fa0;
+    font-size: 2140%;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes stroke {
+    0% {
+        fill: rgba(70, 81, 141, 0);
+        stroke: rgb(234, 236, 240);
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+        stroke-width: 2;
+    }
+
+    70% {
+        fill: rgba(56, 68, 138, 0.3);
+        stroke: rgb(194, 216, 255);
+    }
+
+    80% {
+        fill: rgba(56, 68, 138, 0.6);
+        stroke: rgb(165, 190, 240);
+        stroke-width: 3;
+    }
+
+    100% {
+        fill: rgb(136, 171, 241, 0.9);
+        stroke: rgba(54, 95, 160, 0);
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 50% 0;
+        stroke-width: 0;
+    }
+}
+
+section.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(1px);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#skills p {
+    font-size: xx-large;
+}
+
+.social button {
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin: 10px 10px;
+    width: 150px;
+    height: 40px;
+}
+
+.social button a {
+    font-size: 300%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section-portfolio {
+    padding: 4rem 0;
+    text-align: center;
+    color: #b9b9b9;
+}
+
+.section {
+    display: inline-block;
+}
+
+.portfolio {
+    float: left;
+    padding: 2%;
+}
+
+.semihPhoto {
+    max-width: 12%;
+    border-radius: 50%;
+    margin-left: 5%;
+    float: left;
+    padding-right: 10px;
+}
+
+#slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#slider {
+    display: flex;
+    transition: transform 0.7s ease;
+}
+
+.slide {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.slide-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.slide-text h3,
+.slide-text p {
+    margin: 0;
+    color: #fff;
+}
+
+.section-contact {
+    padding: 4rem 0;
+    text-align: center;
+    color: #f3eeee;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #433d52;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    padding-bottom: 2rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style-type: none;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+.footer-brand i {
+    font-size: 2rem;
+}
+
+.footer-brand p {
+    margin: 0;
+}
+
+
+.skill-mf span {
+    color: #ffffff;
+}
+
+.skill-mf .progress {
+    background-color: #cde1f8;
+    margin: 0.5rem 0 1.2rem 0;
+    border-radius: 0;
+    height: 0.7rem;
+}
+
+.skill-mf .progress .progress-bar {
+    height: 0.7rem;
+    background-color: #0078ff;
+}
