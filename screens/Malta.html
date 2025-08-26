@@ -42,23 +42,29 @@
         <source src="../video/start40.mp4" type="video/mp4">
     </video>
 
-    <div class="header">
-        <img src="../photos/dio software.png" onclick="redirectToPage()" style="width: 40px;" />
-        <div class="header-right">
-            <a class="active" href="../index.html">Home</a>
-            <a class="active" href="./Nisantasi.html">Nisantasi</a>
-            <a class="active" href="./Ayapi.html">A yapı</a>
-            <a class="active" href="./App.html">App</a>
-
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo" onclick="redirectToPage()">
+                <img src="../photos/dio software.png" alt="Dio Software Logo" />
+                <span>Semih Asdan</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="./Nisantasi.html" class="nav-link">University</a>
+                <a href="./App.html" class="nav-link">Dio Coin App</a>
+            </nav>
         </div>
-        <div class="scroll-buttons" aria-label="Scroll buttons">
-            <button onclick="scrollToRow('up')" aria-label="Scroll Up">
-                <img src="../photos/upArrow.png" alt="Scroll Up" />
-            </button>
-            <button onclick="scrollToRow('down')" aria-label="Scroll Down">
-                <img src="../photos/downArrow.png" alt="Scroll Down" />
-            </button>
-        </div>
+    </header>
+    
+    <!-- Scroll Navigation -->
+    <div class="scroll-buttons" aria-label="Scroll buttons">
+        <button onclick="scrollToRow('up')" aria-label="Scroll Up">
+            <img src="../photos/upArrow.png" alt="Scroll Up" />
+        </button>
+        <button onclick="scrollToRow('down')" aria-label="Scroll Down">
+            <img src="../photos/downArrow.png" alt="Scroll Down" />
+        </button>
     </div>
     <div class="container">
         <div class="row">
