@@ -4,9 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nişantaşı </title>
-    <link rel="icon" type="image/png" href="../photos/dio software.png" />
+    <meta name="description" content="Semih Asdan's academic journey at Nişantaşı University - Educational experiences and achievements">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="../ayapi.css">
+    
+    <title>Nişantaşı University Experience - Semih Asdan</title>
+    <link rel="icon" type="image/png" href="../photos/dio software.png" />
+    
     <script>
         function scrollToRow(direction) {
             const rows = document.querySelectorAll('.row');
@@ -14,7 +24,7 @@
 
             rows.forEach((row, index) => {
                 const rect = row.getBoundingClientRect();
-                if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                if (rect.top >= 80 && rect.bottom <= window.innerHeight + 80) {
                     currentRow = index;
                 }
             });
@@ -28,13 +38,15 @@
                 return;
             }
 
-            rows[nextRow].scrollIntoView({ behavior: 'smooth' });
+            const headerHeight = 80;
+            const targetPosition = rows[nextRow].offsetTop - headerHeight;
+            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
         }
+        
         function redirectToPage() {
             window.location.href = "../index.html";
         }
     </script>
-
 </head>
 
 <body>
@@ -42,23 +54,29 @@
         <source src="../video/start40.mp4" type="video/mp4">
     </video>
 
-    <div class="header">
-        <img src="../photos/dio software.png" onclick="redirectToPage()" style="width: 40px;" />
-        <div class="header-right">
-            <a class="active" href="../index.html">Home</a>
-            <a class="active" href="./Ayapi.html">A yapı</a>
-            <a class="active" href="./Malta.html">Malta</a>
-            <a class="active" href="./App.html">App</a>
-
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo" onclick="redirectToPage()">
+                <img src="../photos/dio software.png" alt="Dio Software Logo" />
+                <span>Semih Asdan</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="./Malta.html" class="nav-link">Malta Experience</a>
+                <a href="./App.html" class="nav-link">Dio Coin App</a>
+            </nav>
         </div>
-        <div class="scroll-buttons" aria-label="Scroll buttons">
-            <button onclick="scrollToRow('up')" aria-label="Scroll Up">
-                <img src="../photos/upArrow.png" alt="Scroll Up" />
-            </button>
-            <button onclick="scrollToRow('down')" aria-label="Scroll Down">
-                <img src="../photos/downArrow.png" alt="Scroll Down" />
-            </button>
-        </div>
+    </header>
+    
+    <!-- Scroll Navigation -->
+    <div class="scroll-buttons" aria-label="Scroll buttons">
+        <button onclick="scrollToRow('up')" aria-label="Scroll Up">
+            <img src="../photos/upArrow.png" alt="Scroll Up" />
+        </button>
+        <button onclick="scrollToRow('down')" aria-label="Scroll Down">
+            <img src="../photos/downArrow.png" alt="Scroll Down" />
+        </button>
     </div>
     <div class="container">
         <div class="row">
